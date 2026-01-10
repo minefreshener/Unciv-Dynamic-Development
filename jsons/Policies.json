@@ -1,6 +1,6 @@
 [
     {
-        "name": "Tradition",
+        "name": "Agriculture",
         "era": "Ancient Era",
         "priorities": {
             "Neutral": 5,
@@ -10,62 +10,78 @@
             "Scientific": 5
         },
         "uniques": [
-            "[+3 Culture] [in capital]",
-            "[-25]% Culture cost of natural border growth [in all cities]"
+            "Technological",
+            "Only available <after discovering [Agriculture]>",
+            "Can build [Farm] improvements at a [-50]% rate",
         ],
         "policies": [
             {
-                "name": "Aristocracy",
+                "name": "Subsistance Farming",
                 "uniques": [
-                    "[+15]% Production when constructing [All] wonders [in all cities]",
-                    "[+1 Happiness] per [10] population [in all cities]"
-                ],
-                "row": 1,
-                "column": 1
-            },
-            {
-                "name": "Legalism",
-                "uniques": [
-                    "Provides the cheapest [Culture] building in your first [4] cities for free"
+                    "[+1 Happiness] from every [Farm]",
+                    "Can build [Farm] improvements at a [-25]% rate",
                 ],
                 "row": 1,
                 "column": 3
             },
             {
-                "name": "Oligarchy",
+                "name": "Terrace Farming",
                 "uniques": [
-                    "Units in cities cost no Maintenance",
-                    "[+50]% Strength for cities <with a garrison> <when attacking>",
-                    "[-100]% weight to this choice for AI decisions"
                 ],
-                "row": 1,
-                "column": 5
+                "requires": ["Subsistance Farming"],
+                "row": 2,
+                "column": 1
             },
             {
-                "name": "Landed Elite",
+                "name": "Consolidation of Land",
                 "uniques": [
-                    "[+10]% growth [in capital]",
-                    "[+2 Food] [in capital]"
+                    "Can build [Farm] improvements at a [+25]% rate",
                 ],
-                "requires": ["Legalism"],
+                "requires": ["Subsistance Farming"],
                 "row": 2,
-                "column": 2
+                "column": 3
             },
             {
-                "name": "Monarchy",
+                "name": "Large Scale Farming",
                 "uniques": [
-                    "[+1 Gold, +1 Happiness] per [2] population [in capital]"
+                    "[+1 Food] from every [Farm]",
                 ],
-                "requires": ["Legalism"],
-                "row": 2,
+                "requires": ["Consolidation of Land"],
+                "row": 3,
                 "column": 4
             },
             {
-                "name": "Tradition Complete",
+                "name": "Agrarian Estates",
                 "uniques": [
-                    "[+15]% growth [in all cities]",
-                    "Provides a [Aqueduct] in your first [4] cities for free",
-                    "Get the leader title of [Lord [leaderName]]"
+                    "Can build [Farm] improvements at a [+25]% rate",
+                    "[-1 Happiness] from every [Farm]",
+                ],
+                "requires": ["Consolidation of Land"],
+                "row": 3,
+                "column": 2
+            },
+            {
+                "name": "Cash Crop Farming",
+                "uniques": [
+                ],
+                "requires": ["Agrarian Estates"],
+                "row": 4,
+                "column": 1
+            },
+            {
+                "name": "Urban Agriculture",
+                "uniques": [
+                    "[+5]% growth [in all cities]",
+                    "[+1 Food] [in all cities]"
+                ],
+                "requires": ["Large Scale Agriculture", "Agrarian Estates"],
+                "row": 4,
+                "column": 3
+            },
+            {
+                "name": "Agriculture Complete",
+                "uniques": [
+                    "Get the leader title of [[leaderName] The Farmer]"
                 ]
             }
         ]
