@@ -57,15 +57,5 @@
     		"culture":2
 	  	"greatPersonPoints": {"Great Artist":3},
 		"color": [139,69,19]
-	},
-  {
-		"name":"Mage",
-		"faith":1,
-    		"culture":1,
-    		"science":1,
-	  	"greatPersonPoints": {"Great Scientist":1},
-	  	"greatPersonPoints": {"Great Artist":1},
-	  	"greatPersonPoints": {"Great Engineer":1},
-		"color": [139,69,19]
 	}
 ]
