@@ -48,6 +48,11 @@
         "uniques": ["Invisible to non-adjacent units", "Can see invisible [Submarine] units"]
     },
     {
+        "name": "Ranged Submarine",
+        "movementType": "Water",
+        "uniques": ["Invisible to non-adjacent units", "Can see invisible [Submarine] units"]
+    },
+    {
         "name": "Fighter",
         "movementType": "Air",
         "uniques": ["Aircraft", "Can see over obstacles", "Can perform Air Sweep"]
