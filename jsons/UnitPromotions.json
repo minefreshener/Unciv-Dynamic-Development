@@ -14,167 +14,284 @@
 	// Ranged+Siege
 	{
 		"name": "Accuracy I",
-		"uniques": ["[+15]% Strength <when attacking> <with [85]% chance>"],
-		"unitTypes": ["Ranged Infantry","Ranged Cavalry","Artillery","Ranged Warship","Submarine","Fighter","Bomber",
-			"Atomic Bomber","Helicopter","Missile"],
+		"uniques": ["[+10]% Strength <when attacking> <with [85]% chance>"],
+		"unitTypes": ["Ranged Infantry","Ranged Cavalry","Artillery","Ranged Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
         "column": 1,
         "row": 1
     },
 	{
 		"name": "Accuracy II",
 		"prerequisites": ["Accuracy I"],
-		"uniques": ["[+15]% Strength <when attacking> <with [85]% chance>"],
-		"unitTypes": ["Siege","Archery","Ranged Gunpowder"],
+		"uniques": ["[+10]% Strength <when attacking> <with [85]% chance>"],
+		"unitTypes": ["Ranged Infantry","Ranged Cavalry","Artillery","Ranged Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
         "column": 1,
         "row": 2
     },
 	{
 		"name": "Accuracy III",
 		"prerequisites": ["Accuracy II"],
-		"uniques": ["[+15]% Strength <when attacking> <with [90]% chance>"],
-		"unitTypes": ["Siege","Archery","Ranged Gunpowder"],
+		"uniques": ["[+10]% Strength <when attacking> <with [90]% chance>"],
+		"unitTypes": ["Ranged Infantry","Ranged Cavalry","Artillery","Ranged Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
         "column": 1,
         "row": 3
     },
-
+	{
+		"name": "Extended Range",
+		"prerequisites": ["Accuracy III","Volley II"],
+		"uniques": ["[+1] Range"],
+		"unitTypes": ["Ranged Infantry","Ranged Cavalry","Artillery","Ranged Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
+        "column": 1,
+        "row": 4
+	},
 	{
 		"name": "Barrage I",
-		"uniques": ["[+20]% Strength <when attacking> <with [50]% chance>"],
-		"unitTypes": ["Siege","Archery","Ranged Gunpowder"],
+		"uniques": ["[+20]% Strength <when attacking> <with [40]% chance>"],
+		"unitTypes": ["Ranged Infantry","Ranged Cavalry","Artillery","Ranged Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
         "column": 2,
         "row": 1
 	},
 	{
 		"name": "Barrage II",
 		"prerequisites": ["Barrage I"],
-		"uniques": ["[+20]% Strength <when attacking> <with [50]% chance>"],
-		"unitTypes": ["Siege","Archery","Ranged Gunpowder"],
+		"uniques": ["[+20]% Strength <when attacking> <with [45]% chance>"],
+		"unitTypes": ["Ranged Infantry","Ranged Cavalry","Artillery","Ranged Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
         "column": 2,
         "row": 2
 	},
 	{
 		"name": "Barrage III",
 		"prerequisites": ["Barrage II"],
-		"uniques": ["[+25]% Strength <when attacking> <with [50]% chance>"],
-		"unitTypes": ["Siege","Archery","Ranged Gunpowder"],
+		"uniques": ["[+25]% Strength <when attacking> <with [45]% chance>"],
+		"unitTypes": ["Ranged Infantry","Ranged Cavalry","Artillery","Ranged Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
         "column": 2,
         "row": 3
 	},
-
 	{
-		"name": "Volley",
-		"prerequisites": ["Accuracy I","Barrage I"],
-		"uniques": ["[+50]% Strength <vs cities>"],
-		"unitTypes": ["Siege"],
+		"name": "March",
+		"prerequisites": ["Extended Range","Indirect Fire","Fear","Vigilance","Blitz"],
+		"uniques": ["Unit will heal every turn, even if it performs an action"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Artillery","Siege","Warship","Ranged Warship","Submarine","Fighter","Bomber",
+			"Atomic Bomber","Helicopter","Missile"],
         "column": 3,
-        "row": 1
+        "row": 5
 	},
 	{
-		"name": "Extended Range",
-		"prerequisites": ["Accuracy III","Barrage III","Targeting II","Bombardment II", "Wolfpack II"],
-		"uniques": ["[+1] Range"],
-		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water","Submarine"],
-        "column": 3,
+		"name": "Volley I",
+		"prerequisites": ["Accuracy I","Barrage I"],
+		"uniques": ["[+25]% Strength <vs cities> <when attacking> <with [50]% chance>"],
+		"unitTypes": ["Ranged Infantry","Artillery","Ranged Warship"],
+        "column": 4,
+        "row": 2
+	},
+	{
+		"name": "Volley II",
+		"prerequisites": ["Volley I"],
+		"uniques": ["[+25]% Strength <vs cities> <when attacking> <with [50]% chance>"],
+		"unitTypes": ["Ranged Infantry","Artillery","Ranged Warship"],
+        "column": 4,
         "row": 3
 	},
 	{
 		"name": "Indirect Fire",
-		"prerequisites": ["Accuracy III", "Barrage III", "Bombardment II", "Targeting II"],
+		"prerequisites": ["Volley II", "Barrage III"],
 		"uniques": ["Ranged attacks may be performed over obstacles"],
-		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water"],
-        "column": 3,
+		"unitTypes": ["Artillery","Ranged Warship","Helicopter"],
+        "column": 4,
         "row": 4
 	},
-
-	// Melee, Mounted+Armor
 	{
 		"name": "Shock I",
-		"uniques": ["[+15]% Strength <when fighting in [Open terrain] tiles>", "[-90]% weight to this choice for AI decisions"],
-		"unitTypes": ["Sword","Gunpowder","Mounted","Armored"],
-        "column": 4,
+		"uniques": ["[+15]% Strength <when attacking> <when above [50] HP> <with [65]% chance>"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Siege","Warship","Ranged Warship","Fighter","Bomber","Helicopter"],
+        "column": 5,
         "row": 1
 	},
 	{
 		"name": "Shock II",
 		"prerequisites": ["Shock I"],
-		"uniques": ["[+15]% Strength <when fighting in [Open terrain] tiles>"],
-		"unitTypes": ["Sword","Gunpowder","Mounted","Armored"],
-        "column": 4,
+		"uniques": ["[+15]% Strength <when attacking> <when above [50] HP> <with [65]% chance>"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Siege","Warship","Ranged Warship","Fighter","Bomber","Helicopter"],
+        "column": 5,
         "row": 2
 	},
 	{
 		"name": "Shock III",
 		"prerequisites": ["Shock II"],
-		"uniques": ["[+15]% Strength <when fighting in [Open terrain] tiles>"],
-		"unitTypes": ["Sword","Gunpowder","Mounted","Armored"],
-        "column": 4,
+		"uniques": ["[+15]% Strength <when above [50] HP> <with [65]% chance>"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Siege","Warship","Ranged Warship","Fighter","Bomber","Helicopter"],
+        "column": 5,
         "row": 3
 	},
-
+	{
+		"name": "Fear",
+		"prerequisites": ["Shock III","Pursuit"],
+		"uniques": ["[-10]% Strength for enemy [Military] units in adjacent [All] tiles"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Siege","Warship","Ranged Warship","Fighter","Bomber","Helicopter"],
+        "column": 5,
+        "row": 4
+	},
 	{
 		"name": "Drill I",
-		"uniques": ["[+15]% Strength <when fighting in [Rough terrain] tiles>", "[-90]% weight to this choice for AI decisions"],
-		"unitTypes": ["Sword","Gunpowder","Mounted","Armored"],
-        "column": 5,
+		"uniques": ["[+15]% Strength <when defending> <with [50]% chance>"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Artillery","Siege"],
+        "column": 6,
         "row": 1
 	},
 	{
 		"name": "Drill II",
 		"prerequisites": ["Drill I"],
-		"uniques": ["[+15]% Strength <when fighting in [Rough terrain] tiles>"],
-		"unitTypes": ["Sword","Gunpowder","Mounted","Armored"],
-        "column": 5,
+		"uniques": ["[+15]% Strength <when defending> <with [50]% chance>"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Artillery","Siege"],
+        "column": 6,
         "row": 2
 	},
 	{
 		"name": "Drill III",
 		"prerequisites": ["Drill II"],
-		"uniques": ["[+15]% Strength <when fighting in [Rough terrain] tiles>"],
-		"unitTypes": ["Sword","Gunpowder","Mounted","Armored"],
-        "column": 5,
-        "row": 3
-	},
-	{
-		"name": "Charge",
-		"prerequisites": ["Shock II","Drill II"],
-		"uniques": ["[+33]% Strength <vs [Wounded] units>"],
-		"unitTypes": ["Mounted","Armored"],
-        "column": 6,
-        "row": 2
-	},
-	{
-		"name": "Besiege", // Not called "Siege" in order to not conflict with siege type units for translations
-		"prerequisites": ["Shock II","Drill II"],
-		"uniques": ["[+50]% Strength <vs cities>"],
-		"unitTypes": ["Sword","Gunpowder"],
+		"uniques": ["[+15]% Strength <when defending> <with [50]% chance>"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Artillery","Siege"],
         "column": 6,
         "row": 3
 	},
 	{
-		"name": "Formation I",
-		"prerequisites": ["Shock II","Drill II"], // G&K also has Accuracy II & Barrage II as possible prerequisites for this, but I couldn't find a source for the unittypes
-		"uniques": ["[+33]% Strength <vs [Mounted] units>", "[-50]% weight to this choice for AI decisions"],
-		"unitTypes": ["Sword","Gunpowder","Mounted"],
-        "column": 7,
-        "row": 2
-	},
-	{
-		"name": "Formation II",
-		"prerequisites": ["Formation I"],
-		"uniques": ["[+33]% Strength <vs [Mounted] units>"],
-		"unitTypes": ["Sword","Gunpowder","Mounted"],
-        "column": 7,
-        "row": 3
-	},
-
-	{
-		"name": "Blitz",
-		"prerequisites": ["Shock III","Drill III"],
-		"uniques": ["[1] additional attacks per turn"],
-		"unitTypes": ["Sword","Gunpowder","Mounted","Armored"],
+		"name": "Vigilance",
+		"prerequisites": ["Drill III"],
+		"uniques": ["[+40]% Strength <when fighting in [Fort] tiles> <when defending>","[+60]% Strength <when fighting in [Citadel] tiles> <when defending>",
+			"[+5]% XP gained from combat"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Artillery","Siege"],
         "column": 6,
         "row": 4
 	},
+	{
+		"name": "Pursuit",
+		"prerequisites": ["Shock II","Drill II","Barrage II","Accuracy II","Swooping Crane","Diamond Formation"],
+		"uniques": ["[+33]% Strength <vs [Wounded] units> <when attacking>","[+5]% XP gained from combat"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Warship","Ranged Warship","Submarine","Fighter","Bomber",
+			"Atomic Bomber","Helicopter","Missile"],
+        "column": 7,
+        "row": 3
+	},
+	{
+		"name": "Blitz",
+		"prerequisites": ["Shock III","Drill III","Pursuit","Accuracy III","Barrage III","Volley II"],
+		"uniques": ["[1] additional attacks per turn"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Artillery","Siege","Warship","Ranged Warship","Submarine","Fighter","Bomber",
+			"Atomic Bomber","Helicopter","Missile"],
+        "column": 8,
+        "row": 4
+	},
+	{
+		"name": "Loose Formation",
+		"uniques": ["[-33]% Strength <vs [Cavalry] units>","[+25]% Strength <vs [Ranged Infantry] units> <when defending>",
+			"[+10]% Strength <vs [Ranged Infantry] units> <when attacking>","[+33]% Strength <vs [Artillery] units> <when defending>",
+			"[+25]% Strength <vs [Artillery] units> <when attacking>","[+33]% Strength <vs [Ranged Warship] units> <when defending>",
+			"[+25]% Strength <vs [Ranged Cavalry] units> <when defending>","[+33]% Strength <vs [Fighter] units> <when defending>",
+			"[+33]% Strength <vs [Missile] units> <when defending>","[+15]% Strength <vs [Helicopter] units> <when defending>",
+			"Withdraws before melee combat <with [25]% chance>","[-10]% Strength <when defending>",
+			"Only available <for units without [Tight Formation]>","Only available <for units without [Wedge Formation]>"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Artillery","Siege"],
+        "column": 9,
+        "row": 1
+	},
+	{
+		"name": "Mobility I",
+		"prerequisites": ["Loose Formation","Pursuit"],
+		"uniques": ["[+1] Movement"],
+		"unitTypes": ["Cavalry","Ranged Cavalry","Warship","Ranged Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile","Siege"],
+        "column": 9,
+        "row": 4
+	},
+	{
+		"name": "Mobility II",
+		"prerequisites": ["Mobility I"],
+		"uniques": ["[+1] Movement"],
+		"unitTypes": ["Warship","Ranged Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
+        "column": 9,
+        "row": 5
+	},
+	{
+		"name": "Mobility III",
+		"prerequisites": ["Mobility II"],
+		"uniques": ["[+1] Movement"],
+		"unitTypes": ["Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
+        "column": 9,
+        "row": 6
+	},
+	{
+		"name": "Swooping Crane",
+		"prerequisites": ["Loose Formation"],
+		"uniques": ["[+33]% Strength <vs [Ranged Infantry] units> <when defending>","[+33]% Strength <vs [Ranged Cavalry] units> <when defending>",
+			"[+50]% Strength <when attacking> <with [55]% chance>","[-1] Movement","[+10]% XP gained from combat"],
+		"unitTypes": ["Ranged Cavalry"],
+        "column": 10,
+        "row": 2
+	},
+	{
+		"name": "Tight Formation",
+		"uniques": ["[+20]% Strength <vs [Cavalry] units>","[-15]% Strength <vs [Ranged Infantry] units> <when defending>",
+			"[-33]% Strength <vs [Artillery] units> <when defending>","[+10]% Strength <vs [Artillery] units> <when attacking>",
+			"[-10]% Strength <vs [Ranged Cavalry] units> <when defending>","[+10]% Strength <when defending>",
+			"Only available <for units without [Loose Formation]>"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Siege"],
+        "column": 11,
+        "row": 1
+	},
+	{
+		"name": "Shield Wall",
+		"prerequisites": ["Tight Formation"],
+		"uniques": ["[+15]% Strength <vs [Ranged Infantry] units> <when defending>","[+20]% Strength <vs [Ranged Cavalry] units> <when defending>",
+			"[+25]% Strength <when defending> <with [50]% chance>"],
+		"unitTypes": ["Infantry","Ranged Infantry","Siege"],
+        "column": 11,
+        "row": 2
+	},
+	{
+		"name": "Phalanx",
+		"prerequisites": ["Tight Formation"],
+		"uniques": ["[+40]% Strength <vs [Cavalry] units> <when defending>","[+20]% Strength <vs [Infantry] units> <when defending>",
+			"[+25]% Strength <when defending> <with [15]% chance>","Only available <for units without [Square Formation]>",
+			"Only available <for units without [Schiltrom]>"],
+		"unitTypes": ["Infantry"],
+        "column": 12,
+        "row": 2
+	},
+	{
+		"name": "Square Formation",
+		"prerequisites": ["Tight Formation"],
+		"uniques": ["[+60]% Strength <vs [Cavalry] units> <when defending>","[+33]% Strength <vs [Infantry] units> <when defending>",
+			"[+50]% Strength <when defending> <with [50]% chance>","[-1] Movement","Only available <for units without [Phalanx]>",
+			"Only available <for units without [Schiltrom]>"],
+		"unitTypes": ["Infantry","Ranged Infantry","Siege"],
+        "column": 13,
+        "row": 2
+	},
+	{
+		"name": "Schiltrom",
+		"prerequisites": ["Tight Formation"],
+		"uniques": ["[+10]% Strength <vs [Cavalry] units> <when defending>","[+33]% Strength <vs [Infantry] units> <when defending>",
+			"[+15]% Strength <when defending> <with [50]% chance>","Only available <for units without [Phalanx]>","Only available <for units without [Square Formation]>"],
+		"unitTypes": ["Infantry","Ranged Infantry","Siege"],
+        "column": 14,
+        "row": 2
+	},
+	{
+		"name": "Wedge Formation",
+		"uniques": ["[+40]% Strength <vs [Tight Formation] units> <when attacking>","[+15]% Strength <when attacking> <with [50]% chance>",
+			"Only available <for units without [Loose Formation]>"],
+		"unitTypes": ["Cavalry"],
+        "column": 15,
+        "row": 1
+	},
+	{
+		"name": "Diamond Formation",
+		"prerequisites": ["Wedge Formation"],
+		"uniques": ["[+10]% Strength <when defending> <with [50]% chance>","[+10]% Strength <when attacking> <with [50]% chance>","[+1] Movement",
+			"[+33]% to Flank Attack bonuses","[+33]% to Flank Attack bonuses <vs [Phalanx] units>"],
+		"unitTypes": ["Cavalry"],
+        "column": 15,
+        "row": 2
+	},
+	// Melee, Mounted+Armor
 	{
 		"name": "Woodsman",
 		"prerequisites": ["Shock III","Drill III"],
@@ -591,15 +708,6 @@
 		"unitTypes": ["Sword","Gunpowder","Archery","Ranged Gunpowder","Siege"],
         "column": 24,
         "row": 2
-	},
-
-	{
-		"name": "March",
-		"prerequisites": ["Accuracy II","Barrage II","Shock III","Drill III"],
-		"uniques": ["Unit will heal every turn, even if it performs an action"],
-		"unitTypes": ["Sword","Gunpowder","Archery","Ranged Gunpowder","Siege","Mounted"],
-        "column": 10,
-        "row": 3
 	},
 	{
 		"name": "Mobility",
