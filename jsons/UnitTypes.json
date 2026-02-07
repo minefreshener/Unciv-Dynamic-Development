@@ -39,6 +39,10 @@
         "movementType": "Water"
     },
     {
+        "name": "Ranged Warship",
+        "movementType": "Water"
+    },
+    {
         "name": "Submarine",
         "movementType": "Water",
         "uniques": ["Invisible to non-adjacent units", "Can see invisible [Submarine] units"]
