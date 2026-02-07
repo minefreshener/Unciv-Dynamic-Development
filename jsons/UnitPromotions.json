@@ -2,8 +2,8 @@
 
 	{
 		"name": "Heal Instantly",
-		"uniques": ["[This Unit] heals [50] HP", "Doing so will consume this opportunity to choose a Promotion"],
-		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Artillery","Siege"],
+		"uniques": ["[This Unit] heals [100] HP", "Doing so will consume this opportunity to choose a Promotion"],
+		"unitTypes": ["Infantry","Cavalry","Ranged Infantry","Ranged Cavalry","Artillery","Siege","Warship","Submarine","Fighter","Bomber","Atomic Bomber","Helicopter","Missile"],
 		"innerColor": [195,53,43],
 		"outerColor": [253,236,234],
         "row": 0,
