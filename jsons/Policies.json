@@ -12,76 +12,165 @@
         "uniques": [
             "Technological",
             "Only available <after discovering [Agriculture]>",
-            "Can build [Farm] improvements at a [-50]% rate",
+            "Comment [Unlocks Farm]"
         ],
         "policies": [
             {
-                "name": "Subsistance Farming",
+                "name": "Subsistence Farming",
                 "uniques": [
-                    "[+1 Happiness] from every [Farm]",
+                    "[+1 Culture] from every [Farm]",
                     "Can build [Farm] improvements at a [-25]% rate",
+                    "Only available <before adopting [Industrial Farming]>",
+                    "Only available <before adopting [Commercial Farming]>"
+                ],
+                "row": 1,
+                "column": 1
+            },
+            {
+                "name": "Industrial Farming",
+                "uniques": [
+                    "[+1 Production, -1 Food] from every [Farm]",
+                    "Only available <after discovering [Machinery]>",
+                    "Only available <before adopting [Subsistence Farming]>"
                 ],
                 "row": 1,
                 "column": 3
             },
             {
+                "name": "Oil Farming",
+                "uniques": [
+                    "Only available <after discovering [Biology]>"
+                ],
+                "requires": ["Industrial Farming"],
+                "row": 2,
+                "column": 3
+            },
+            {
+                "name": "Commercial Farming",
+                "uniques": [
+                    "[+1 Gold, -1 Food] from every [Farm]",
+                    "Only available <after discovering [Economics]>",
+                    "Only available <before adopting [Subsistence Farming]>"
+                ],
+                "row": 1,
+                "column": 5
+            },
+            {
                 "name": "Terrace Farming",
                 "uniques": [
+                    "Comment [Unlocks Terrace Farm]"
                 ],
-                "requires": ["Subsistance Farming"],
-                "row": 2,
-                "column": 1
-            },
-            {
-                "name": "Consolidation of Land",
-                "uniques": [
-                    "Can build [Farm] improvements at a [+25]% rate",
-                ],
-                "requires": ["Subsistance Farming"],
-                "row": 2,
-                "column": 3
-            },
-            {
-                "name": "Large Scale Farming",
-                "uniques": [
-                    "[+1 Food] from every [Farm]",
-                ],
-                "requires": ["Consolidation of Land"],
                 "row": 3,
-                "column": 4
-            },
-            {
-                "name": "Agrarian Estates",
-                "uniques": [
-                    "Can build [Farm] improvements at a [+25]% rate",
-                    "[-1 Happiness] from every [Farm]",
-                ],
-                "requires": ["Consolidation of Land"],
-                "row": 3,
-                "column": 2
-            },
-            {
-                "name": "Cash Crop Farming",
-                "uniques": [
-                ],
-                "requires": ["Agrarian Estates"],
-                "row": 4,
                 "column": 1
-            },
-            {
-                "name": "Urban Agriculture",
-                "uniques": [
-                    "[+5]% growth [in all cities]",
-                    "[+1 Food] [in all cities]"
-                ],
-                "requires": ["Large Scale Agriculture", "Agrarian Estates"],
-                "row": 4,
-                "column": 3
             },
             {
                 "name": "Agriculture Complete",
                 "uniques": [
-                    "Get the leader title of [[leaderName] The Farmer]"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Horsemanship",
+        "era": "Ancient Era",
+        "priorities": {
+            "Neutral": 5,
+            "Cultural": 5,
+            "Diplomatic": 5,
+            "Domination": 5,
+            "Scientific": 5
+        },
+        "uniques": [
+            "Technological",
+            "Only available <after discovering [Animal Husbandry]>",
+            "Comment [Unlocks Stable]"
+        ],
+        "policies": [
+            {
+                "name": "Chariotry",
+                "uniques": [
+                    "Only available <after discovering [The Wheel]>",
+                    "Comment [Unlocks Chariot Archer and War Chariot]"
+                ],
+                "row": 1,
+                "column": 1
+            },
+            {
+                "name": "Chariot Racing",
+                "uniques": [
+                ],
+                "requires": ["Chariotry"],
+                "row": 2,
+                "column": 1
+            },
+            {
+                "name": "Horse Breeding",
+                "uniques": [
+                    "[+1 Culture] from every [Horses]",
+                ],
+                "row": 1,
+                "column": 3
+            },
+            {
+                "name": "Horse Riding",
+                "uniques": [
+                    "Only available <after discovering [Horseback Riding]>",
+                    "Comment [Unlocks Horseman]"
+                ],
+                "requires": ["Horse Breeding"],
+                "row": 2,
+                "column": 3
+            },
+            {
+                "name": "Horse Archery",
+                "uniques": [
+                    "Only available <after discovering [Archery]>",
+                    "Comment [Unlocks Horse Archer]"
+                ],
+                "requires": ["Horse Riding"],
+                "row": 3,
+                "column": 1
+            },
+            {
+                "name": "Horse Racing",
+                "uniques": [
+                    "[+1 Happiness] from every [Horses]",
+                ],
+                "requires": ["Horse Riding"],
+                "row": 3,
+                "column": 3
+            },
+            {
+                "name": "Mounted Nobility",
+                "uniques": [
+                ],
+                "requires": ["Horse Riding"],
+                "row": 3,
+                "column": 5
+            },
+            {
+                "name": "Horse Gunnery",
+                "uniques": [
+                    "Only available <after discovering [Gunpowder]>",
+                ],
+                "requires": ["Horse Archery"],
+                "row": 4,
+                "column": 1
+            },
+            {
+                "name": "Established Equine Tradition",
+                "uniques": [
+                    "[+2 Culture] from every [Horses]",
+                    "Comment [Unlocks Horse Breeding Guild]"
+                ],
+                "requires": ["Horse Racing", "Horse Archery", "Mounted Nobility"],
+                "row": 4,
+                "column": 3
+            },
+            {
+                "name": "Horsemanship Complete",
+                "uniques": [
+                    "Get the leader title of [[leaderName], Horsemaster]"
                 ]
             }
         ]
