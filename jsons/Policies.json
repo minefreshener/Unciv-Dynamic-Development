@@ -3,11 +3,11 @@
         "name": "Agriculture",
         "era": "Ancient Era",
         "priorities": {
-            "Neutral": 5,
-            "Cultural": 5,
-            "Diplomatic": 5,
-            "Domination": 5,
-            "Scientific": 5
+            "Neutral": 10,
+            "Cultural": 20,
+            "Diplomatic": 10,
+            "Domination": 20,
+            "Scientific": 20
         },
         "uniques": [
             "Technological",
@@ -65,6 +65,67 @@
             },
             {
                 "name": "Agriculture Complete",
+                "uniques": [
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Forestry",
+        "era": "Ancient Era",
+        "priorities": {
+            "Neutral": 5,
+            "Cultural": 20,
+            "Diplomatic": 5,
+            "Domination": 10,
+            "Scientific": 0
+        },
+        "uniques": [
+            "Technological",
+            "Comment [Unlocks Camp]",
+        ],
+        "policies": [
+            {
+                "name": "Foraging",
+                "uniques": [
+                    "[+1 Food] from every [Camp]",
+                    "Only available <before adopting [Industrial Farming]>",
+                    "Only available <before adopting [Commercial Farming]>"
+                ],
+                "row": 1,
+                "column": 1
+            },
+            {
+                "name": "Trapping",
+                "uniques": [
+                    "[+1 Food] from every [Camp]",
+                    "Comment [allows Camp improvements to improve animal resources]",
+                    "Only available <after discovering [Trapping]>",
+                ],
+                "row": 1,
+                "column": 3
+            },
+            {
+                "name": "Large-Scale Foraging",
+                "uniques": [
+                    "Comment [allows Camp improvements to be built on all forest and jungle tiles]"
+                ],
+                "requires": ["Foraging","Hunting"],
+                "row": 2,
+                "column": 1
+            },
+            {
+                "name": "Commercial Hunting",
+                "uniques": [
+                    "[-1 Food, +1 Gold] from every [Camp]",
+                    "Only available <after discovering [Guilds]>",
+                ],
+                "requires": ["Hunting"],
+                "row": 2,
+                "column": 3
+            },
+            {
+                "name": "Forestry Complete",
                 "uniques": [
                 ]
             }
