@@ -2,14 +2,17 @@
 
 	{
 		"name": "Farm",
-		"terrainsCanBeBuiltOn": ["Plains","Grassland","Desert","Flood plains"],
+		"terrainsCanBeBuiltOn": ["Plains","Grassland","Flood plains"],
 		"food": 1,
 		"turnsToBuild": 7,
 		"techRequired": "Agriculture",
 		"uniques": ["Can also be built on tiles adjacent to fresh water",
 			"[+1 Food] from [Fresh water] tiles <after discovering [Civil Service]>",
 			"[+1 Food] from [non-fresh water] tiles <after discovering [Fertilizer]>",
-            "Pillaging this improvement yields approximately [+20 Gold]","Gives a defensive bonus of [5]%"],
+            "Pillaging this improvement yields approximately [+20 Gold]","Gives a defensive bonus of [5]%",
+		    "Only available <after discovering [Machinery]>",
+            "Only available <after adopting [Agriculture]>"
+		],
 		"shortcutKey": "F"
 	},
 	{
@@ -43,10 +46,16 @@
 	// Resource-specific
 	{
 		"name": "Camp",
+		"terrainsCanBeBuiltOn": ["Forest","Jungle"],
 		"turnsToBuild": 7,
-		"techRequired": "Trapping",
-		"uniques": ["Does not need removal of [Forest]","Does not need removal of [Jungle]","[+1 Gold] <after discovering [Economics]>",
-            "Can only be built to improve a resource","Pillaging this improvement yields approximately [+10 Gold]"],
+		"techRequired": "Agriculture",
+		"uniques": [
+			"Does not need removal of [Forest]",
+			"Does not need removal of [Jungle]",
+			"Pillaging this improvement yields approximately [+10 Gold]",
+			"Cannot be built on [Cattle] tiles <before adopting [Hunting]>",
+			"Cannot be built on [Sheep] tiles <before adopting [Hunting]>",
+		],
 		"shortcutKey": "C"
 	},
 	{
