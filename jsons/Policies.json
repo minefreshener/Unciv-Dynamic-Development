@@ -138,9 +138,9 @@
         "priorities": {
             "Neutral": 5,
             "Cultural": 20,
-            "Diplomatic": 5,
+            "Diplomatic": 10,
             "Domination": 10,
-            "Scientific": 0
+            "Scientific": 15
         },
         "uniques": [
             "Technological",
@@ -206,6 +206,222 @@
                 "name": "Pottery Complete",
                 "uniques": [
                     "Get the leader title of [[leaderName], The Potter]"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Archery",
+        "era": "Ancient Era",
+        "priorities": {
+            "Neutral": 5,
+            "Cultural": 15,
+            "Diplomatic": 10,
+            "Domination": 20,
+            "Scientific": 10
+        },
+        "uniques": [
+            "Technological",
+            "Comment [Unlocks Shooting Range]",
+            "Only available <after discovering [Archery]>",
+        ],
+        "policies": [
+            {
+                "name": "Bowmanship",
+                "uniques": [
+                    "Comment [Unlocks Archer]",
+                    "Comment [Unlocks Fletcher]",
+                    "Comment [Unlocks Archery Range]",
+                ],
+                "row": 1,
+                "column": 3
+            },
+            {
+                "name": "Composite Bows",
+                "uniques": [
+                    "Comment [Unlocks Composite Bowman]",
+                    "Comment [Unlocks Bowmaker]",
+                    "Only available <after discovering [Construction]>",
+                ],
+                "requires": ["Bowmanship"],
+                "row": 2,
+                "column": 1
+            },
+            {
+                "name": "Crossbows",
+                "uniques": [
+                    "Comment [Unlocks Crossbowman]",
+                    "[+1 Production] from every [Bowmaker]",
+                    "Only available <after discovering [Machinery]>",
+                ],
+                "requires": ["Composite Bows"],
+                "row": 3,
+                "column": 1
+            },
+            {
+                "name": "Longbows",
+                "uniques": [
+                    "Comment [Unlocks Longbowman]",
+                    "[+1 Production] from every [Bowmaker]",
+                    "Only available <after discovering [Engineering]>",
+                ],
+                "requires": ["Composite Bows"],
+                "row": 3,
+                "column": 3
+            },
+            {
+                "name": "Compound Bows",
+                "uniques": [
+                    "Comment [Unlocks Modern Archer]",
+                    "Comment [Unlocks Modern Crossbowman]",
+                    "[+1 Production, +1 Science] from every [Bowmaker]",
+                    "Only available <after discovering [Combined Arms]>",
+                ],
+                "requires": ["Crossbows", "Longbows"],
+                "row": 4,
+                "column": 1
+            },
+            {
+                "name": "Copper Arrowheads",
+                "uniques": [
+                    "Only available <after discovering [Mining]>",
+                    "[+5]% Strength <for [Bow] units>",
+                    "[+1 Production] from every [Fletcher]",
+                ],
+                "requires": ["Bowmanship"],
+                "row": 2,
+                "column": 5
+            },
+            {
+                "name": "Bronze Arrowheads",
+                "uniques": [
+                    "Only available <after discovering [Bronze Working]>",
+                    "[+5]% Strength <for [Bow] units>",
+                    "[+1 Production] from every [Blacksmith]",
+                    "[+1 Production] from every [Bronzesmith]",
+                ],
+                "requires": ["Copper Arrowheads"],
+                "row": 3,
+                "column": 5
+            },
+            {
+                "name": "Iron Arrowheads",
+                "uniques": [
+                    "Only available <after discovering [Iron Working]>",
+                    "[+5]% Strength <for [Bow] units>",
+                    "[+1 Production] from every [Blacksmith]",
+                ],
+                "requires": ["Bronze Arrowheads"],
+                "row": 4,
+                "column": 5
+            },
+            {
+                "name": "Steel Arrowheads",
+                "uniques": [
+                    "Only available <after discovering [Steel]>",
+                    "[+10]% Strength <for [Bow] units>",
+                    "[+1 Production] from every [Blacksmith]",
+                ],
+                "requires": ["Iron Arrowheads"],
+                "row": 5,
+                "column": 5
+            },
+            {
+                "name": "Slings",
+                "uniques": [
+                    "Comment [Unlocks Slinger]",
+                ],
+                "row": 1,
+                "column": 7
+            },
+            {
+                "name": "Clay Bullets",
+                "uniques": [
+                    "Only available <after discovering [Pottery]>",
+                    "[+5]% Strength <for [Sling] units>",
+                    "[+1 Production] from every [Kiln]",
+                ],
+                "requires": ["Slings"],
+                "row": 2,
+                "column": 7
+            },
+            {
+                "name": "Iron Bullets",
+                "uniques": [
+                    "Only available <after discovering [Iron Working]>",
+                    "[+10]% Strength <for [Sling] units>",
+                    "[+1 Production] from every [Blacksmith]",
+                ],
+                "requires": ["Clay Bullets"],
+                "row": 3,
+                "column": 7
+            },
+            {
+                "name": "Javelins",
+                "uniques": [
+                    "Comment [Unlocks Javelinman]",
+                ],
+                "row": 1,
+                "column": 10
+            },
+            {
+                "name": "Bronze Javelin Heads",
+                "uniques": [
+                    "Only available <after discovering [Bronze Working]>",
+                    "[+5]% Strength <for [Javelin] units>",
+                    "[+1 Production] from every [Bronzesmith]",
+                    "[+1 Production] from every [Blacksmith]",
+                ],
+                "requires": ["Javelins"],
+                "row": 2,
+                "column": 9
+            },
+            {
+                "name": "Iron Javelin Heads",
+                "uniques": [
+                    "Only available <after discovering [Iron Working]>",
+                    "[+5]% Strength <for [Javelin] units>",
+                    "[+1 Production] from every [Blacksmith]",
+                ],
+                "requires": ["Bronze Javelin Heads"],
+                "row": 3,
+                "column": 9
+            },
+            {
+                "name": "Steel Javelin Heads",
+                "uniques": [
+                    "Only available <after discovering [Steel]>",
+                    "[+10]% Strength <for [Javelin] units>",
+                    "[+1 Production] from every [Blacksmith]",
+                ],
+                "requires": ["Iron Javelin Heads"],
+                "row": 4,
+                "column": 9
+            },
+            {
+                "name": "Atlatls",
+                "uniques": [
+                    "Comment [Unlocks Atlatlist]",
+                ],
+                "requires": ["Javelins"],
+                "row": 2,
+                "column": 11
+            },
+            {
+                "name": "Detachable Heads",
+                "uniques": [
+                    "Only available <after discovering [Engineering]>",
+                    "[+10]% Strength <for [Javelin] units> <when defending>",
+                    "[+1 Production] from every [Blacksmith]",
+                ],
+                "requires": ["Iron Javelin Heads"],
+                "row": 4,
+                "column": 11
+            },
+            {
+                "name": "Archery Complete",
+                "uniques": [
+                    "Get the leader title of [[leaderName], Bowmaster]"
                 ]
             }
         ]
