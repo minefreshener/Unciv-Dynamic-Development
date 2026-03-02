@@ -101,6 +101,7 @@
                 "uniques": [
                     "[+1 Production] from every [Camp]",
                     "Comment [allows Camp improvements to improve animal resources]",
+                    "Comment [1 of 1 policies needed for Temple of Artemis]",
                     "Only available <after discovering [Trapping]>",
                 ],
                 "row": 1,
@@ -423,6 +424,90 @@
                 "name": "Archery Complete",
                 "uniques": [
                     "Get the leader title of [[leaderName], Bowmaster]"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Mining",
+        "era": "Ancient Era",
+        "priorities": {
+            "Neutral": 5,
+            "Cultural": 10,
+            "Diplomatic": 5,
+            "Domination": 15,
+            "Scientific": 20
+        },
+        "uniques": [
+            "Technological",
+            "Comment [Unlocks Mine]",
+            "Only available <after discovering [Mining]>",
+        ],
+        "policies": [
+            {
+                "name": "Prospecting",
+                "uniques": [
+                    "Comment [Unlocks Mine]",
+                ],
+                "row": 1,
+                "column": 3
+            },
+            {
+                "name": "Open Pit Mining",
+                "uniques": [
+                    "Comment [allows Mine improvements to be built on non-resource tiles]"
+                ],
+                "requires": ["Prospecting"],
+                "row": 2,
+                "column": 1
+            },
+            {
+                "name": "Underground Mining",
+                "uniques": [
+                    "Only available <after discovering [Physics]>",
+                    "[+1 Production, -1 Food] from every [Mine]",
+                ],
+                "requires": ["Prospecting"],
+                "row": 2,
+                "column": 3
+            },
+            {
+                "name": "Quarrying",
+                "uniques": [
+                    "Only available <after discovering [Masonry]>",
+                    "Comment [Unlocks Quarry]",
+                ],
+                "requires": ["Prospecting"],
+                "row": 2,
+                "column": 5
+            },
+            {
+                "name": "Blast Mining",
+                "uniques": [
+                    "Only available <after discovering [Dynamite]>",
+                    "[+2 Production, -1 Food] from every [Mine]",
+                    "[+1 Production] from every [Quarry]",
+                ],
+                "requires": ["Open Pit Mining", "Underground Mining", "Quarrying"],
+                "row": 3,
+                "column": 3
+            },
+            {
+                "name": "Mountaintop Mining",
+                "uniques": [
+                    "Only available <after discovering [Dynamite]>",
+                    "[+2 Production] from every [Mountain]",
+                    "Comment [allows Mine improvements to be built on Mountain tiles]",
+                    "Comment [allows Quarry improvements to be built on Mountain tiles]",
+                ],
+                "requires": ["Blast Mining"],
+                "row": 4,
+                "column": 3
+            },
+            {
+                "name": "Mining Complete",
+                "uniques": [
+                    "Get the leader title of [[leaderName], The Miner]"
                 ]
             }
         ]
