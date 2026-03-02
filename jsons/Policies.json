@@ -212,6 +212,142 @@
         ]
     },
     {
+        "name": "Melee Weaponry",
+        "era": "Ancient Era",
+        "priorities": {
+            "Neutral": 5,
+            "Cultural": 15,
+            "Diplomatic": 10,
+            "Domination": 20,
+            "Scientific": 5
+        },
+        "uniques": [
+            "Technological",
+            "Comment [Unlocks Weaponsmith]",
+        ],
+        "policies": [
+            {
+                "name": "The Axe",
+                "uniques": [
+                    "Comment [Unlocks Axeman]",
+                ],
+                "row": 1,
+                "column": 1
+            },
+            {
+                "name": "Great Axes",
+                "uniques": [
+                    "Only available <after discovering [Bronze Working]>",
+                    "Comment [Unlocks Greataxeman]",
+                ],
+                "requires": ["The Axe"],
+                "row": 2,
+                "column": 1
+            },
+            {
+                "name": "Throwing Axes",
+                "uniques": [
+                    "Only available <after discovering [Bronze Working]>",
+                    "[+10]% Strength <for [Axe] units> <when attacking>",
+                ],
+                "requires": ["The Axe"],
+                "row": 2,
+                "column": 3
+            },
+            {
+                "name": "The Spear",
+                "uniques": [
+                    "Comment [Unlocks Spearman]",
+                ],
+                "row": 1,
+                "column": 5
+            },
+            {
+                "name": "Advanced Polearms",
+                "uniques": [
+                    "Comment [Unlocks Falxman]",
+                    "Only available <after discovering [Construction]>",
+                ],
+                "requires": ["The Axe", "The Spear", "The Sword"],
+                "row": 2,
+                "column": 5
+            },
+            {
+                "name": "Pikes",
+                "uniques": [
+                    "Comment [Unlocks Pikeman]",
+                    "Only available <after discovering [Engineering]>",
+                ],
+                "requires": ["Advanced Polearms"],
+                "row": 3,
+                "column": 1
+            },
+            {
+                "name": "Halberds",
+                "uniques": [
+                    "Comment [Unlocks Halberdier]",
+                    "Only available <after discovering [Metal Casting]>",
+                ],
+                "requires": ["Advanced Polearms"],
+                "row": 3,
+                "column": 3
+            },
+            {
+                "name": "Sword-Staves",
+                "uniques": [
+                    "Comment [Unlocks Swordstaffman]",
+                    "Only available <after discovering [Metal Casting]>",
+                ],
+                "requires": ["Advanced Polearms"],
+                "row": 3,
+                "column": 5
+            },
+            {
+                "name": "The Sword",
+                "uniques": [
+                    "Comment [Unlocks Swordsman]",
+                    "Only available <after discovering [Bronze Working]>",
+                ],
+                "row": 1,
+                "column": 7
+            },
+            {
+                "name": "Longswords",
+                "uniques": [
+                    "Comment [Unlocks Longswordsman]",
+                    "Only available <after discovering [Iron Working]>",
+                ],
+                "requires": ["The Sword"],
+                "row": 2,
+                "column": 7
+            },
+            {
+                "name": "The Dagger",
+                "uniques": [
+                    "[+5]% Strength <for [All] units> <when defending>",
+                ],
+                "row": 1,
+                "column": 9
+            },
+            {
+                "name": "Bayonets",
+                "uniques": [
+                    "Only available <after discovering [Gunpowder]>",
+                    "[+10]% Strength <for [Gun] units> <when defending>",
+                ],
+                "requires": ["The Sword", "The Dagger"],
+                "row": 2,
+                "column": 9
+            },
+            {
+                "name": "Melee Weaponry Complete",
+                "uniques": [
+                    "Get the leader title of [[leaderName], The Impaler]"
+                ]
+            }
+        ]
+    },
+    {
         "name": "Archery",
         "era": "Ancient Era",
         "priorities": {
