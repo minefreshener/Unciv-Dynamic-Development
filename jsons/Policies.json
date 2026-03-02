@@ -222,7 +222,6 @@
         },
         "uniques": [
             "Technological",
-            "Comment [Unlocks Shooting Range]",
             "Only available <after discovering [Archery]>",
         ],
         "policies": [
@@ -310,6 +309,7 @@
                     "Only available <after discovering [Iron Working]>",
                     "[+5]% Strength <for [Bow] units>",
                     "[+1 Production] from every [Blacksmith]",
+                    "[+1 Production] from every [Fletcher]",
                 ],
                 "requires": ["Bronze Arrowheads"],
                 "row": 4,
@@ -321,6 +321,7 @@
                     "Only available <after discovering [Steel]>",
                     "[+10]% Strength <for [Bow] units>",
                     "[+1 Production] from every [Blacksmith]",
+                    "[+1 Production] from every [Fletcher]",
                 ],
                 "requires": ["Iron Arrowheads"],
                 "row": 5,
