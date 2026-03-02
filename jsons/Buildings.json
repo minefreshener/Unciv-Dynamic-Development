@@ -1,7 +1,5 @@
 [
 	// Ancient Era
-
-	// Always available
 	{
 		"name": "Palace",
 		"isNationalWonder": true,
@@ -13,6 +11,46 @@
 		"cost": 0,
 		"uniques": ["Indicates the capital city"]
 	},
+	{
+		"name": "Granary",
+		"food": 2,
+		"maintenance": 1,
+		"hurryCostModifier": 25,
+		"uniques": [
+			"[+1 Food] from [Wheat] tiles [in this city]",
+			"Only available <after adopting [Agriculture]>",
+		],
+		"requiredTech": "Pottery"
+	},
+	{
+		"name": "Shrine",
+		"faith": 1,
+		"cost": 40,
+		"maintenance": 1,
+		"requiredTech": "Pottery",
+		"uniques": ["Only available <when religion is enabled>"]
+	},
+	{
+		"name": "Pottery Workshop",
+		"production": 1,
+		"maintenance": 1,
+		"hurryCostModifier": 25,
+		"uniques": [
+			"Only available <after adopting [Pottery]>",
+		],
+		"requiredTech": "Pottery"
+	},
+	{
+		"name": "Kiln",
+		"production": 2,
+		"maintenance": 1,
+		"hurryCostModifier": 25,
+		"uniques": [
+			"Only available <after adopting [Pottery]>",
+		],
+		"requiredTech": "Pottery"
+	},
+	// Always available
 	{
 		"name": "Monument",
 		"culture": 2,
@@ -33,24 +71,6 @@
 		"uniques": ["Destroyed when the city is captured"] //"Only available <when religion is enabled>"
 	},
 	// Column 1
-	{
-		"name": "Granary",
-		"food": 2,
-		"maintenance": 1,
-		"hurryCostModifier": 25,
-		"uniques": ["[+1 Food] from [Deer] tiles [in this city]",
-			"[+1 Food] from [Bananas] tiles [in this city]",
-			"[+1 Food] from [Wheat] tiles [in this city]"],
-		"requiredTech": "Pottery"
-	},
-	{
-		"name": "Shrine",
-		"faith": 1,
-		"cost": 40,
-		"maintenance": 1,
-		"requiredTech": "Pottery",
-		"uniques": ["Only available <when religion is enabled>"]
-	},
 	{
 		"name": "Pyramid",
 		"replaces": "Shrine",
