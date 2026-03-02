@@ -37,6 +37,7 @@
 		"hurryCostModifier": 25,
 		"uniques": [
 			"Only available <after adopting [Pottery]>",
+			"Provides [1] [Porcelain] <after adopting [Porcelain Production]>"
 		],
 		"requiredTech": "Pottery"
 	},
