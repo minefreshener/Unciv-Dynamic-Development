@@ -39,7 +39,8 @@
             {
                 "name": "Oil Farming",
                 "uniques": [
-                    "Only available <after discovering [Biology]>"
+                    "Only available <after discovering [Biology]>",
+                    "[+1 Production, +1 Food] from every [Farm]",
                 ],
                 "requires": ["Industrial Farming"],
                 "row": 2,
@@ -49,7 +50,7 @@
                 "name": "Commercial Farming",
                 "uniques": [
                     "[+1 Gold, -1 Food] from every [Farm]",
-                    "Only available <after discovering [Economics]>",
+                    "Only available <after discovering [Guilds]>",
                     "Only available <before adopting [Subsistence Farming]>"
                 ],
                 "row": 1,
@@ -98,7 +99,7 @@
             {
                 "name": "Trapping",
                 "uniques": [
-                    "[+1 Food] from every [Camp]",
+                    "[+1 Production] from every [Camp]",
                     "Comment [allows Camp improvements to improve animal resources]",
                     "Only available <after discovering [Trapping]>",
                 ],
@@ -120,7 +121,7 @@
                     "[-1 Food, +1 Gold] from every [Camp]",
                     "Only available <after discovering [Guilds]>",
                 ],
-                "requires": ["Hunting"],
+                "requires": ["Trapping"],
                 "row": 2,
                 "column": 3
             },
