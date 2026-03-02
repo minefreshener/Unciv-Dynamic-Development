@@ -40,7 +40,7 @@
                 "name": "Oil Farming",
                 "uniques": [
                     "Only available <after discovering [Biology]>",
-                    "[+1 Production, +1 Food] from every [Farm]",
+                    "[+1 Food] from every [Farm]",
                 ],
                 "requires": ["Industrial Farming"],
                 "row": 2,
@@ -133,6 +133,64 @@
         ]
     },
     {
+        "name": "Pottery",
+        "era": "Ancient Era",
+        "priorities": {
+            "Neutral": 5,
+            "Cultural": 20,
+            "Diplomatic": 5,
+            "Domination": 10,
+            "Scientific": 0
+        },
+        "uniques": [
+            "Technological",
+            "Comment [Unlocks Pottery Workshop and Granary]",
+        ],
+        "policies": [
+            {
+                "name": "",
+                "uniques": [
+                    "[+1 Food] from every []",
+                ],
+                "row": 1,
+                "column": 1
+            },
+            {
+                "name": "Trapping",
+                "uniques": [
+                    "[+1 Production] from every [Camp]",
+                    "Only available <after discovering [Trapping]>",
+                ],
+                "row": 1,
+                "column": 3
+            },
+            {
+                "name": "Large-Scale Foraging",
+                "uniques": [
+                    "Comment [allows Camp improvements to be built on all forest and jungle tiles]"
+                ],
+                "requires": ["Foraging","Hunting"],
+                "row": 2,
+                "column": 1
+            },
+            {
+                "name": "Commercial Hunting",
+                "uniques": [
+                    "[-1 Food, +1 Gold] from every [Camp]",
+                    "Only available <after discovering [Guilds]>",
+                ],
+                "requires": ["Trapping"],
+                "row": 2,
+                "column": 3
+            },
+            {
+                "name": "Forestry Complete",
+                "uniques": [
+                ]
+            }
+        ]
+    },
+    {
         "name": "Horsemanship",
         "era": "Ancient Era",
         "priorities": {
@@ -160,6 +218,7 @@
             {
                 "name": "Chariot Racing",
                 "uniques": [
+                    "[+1 Culture] from every [Colloseum]",
                 ],
                 "requires": ["Chariotry"],
                 "row": 2,
@@ -168,7 +227,7 @@
             {
                 "name": "Horse Breeding",
                 "uniques": [
-                    "[+1 Culture] from every [Horses]",
+                    "[+1 Gold] from every [Horses]",
                 ],
                 "row": 1,
                 "column": 3
@@ -205,6 +264,7 @@
             {
                 "name": "Mounted Nobility",
                 "uniques": [
+                    "Comment [Unlocks Elite Horseman and Elite Horse Archer]"
                 ],
                 "requires": ["Horse Riding"],
                 "row": 3,
@@ -214,6 +274,7 @@
                 "name": "Horse Gunnery",
                 "uniques": [
                     "Only available <after discovering [Gunpowder]>",
+                    "Comment [Unlocks Dragoon and Pistolier]"
                 ],
                 "requires": ["Horse Archery"],
                 "row": 4,
