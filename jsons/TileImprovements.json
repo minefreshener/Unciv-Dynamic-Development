@@ -53,8 +53,8 @@
 			"Does not need removal of [Forest]",
 			"Does not need removal of [Jungle]",
 			"Pillaging this improvement yields approximately [+10 Gold]",
-			"Cannot be built on [Cattle] tiles <before adopting [Hunting]>",
-			"Cannot be built on [Sheep] tiles <before adopting [Hunting]>",
+			"Cannot be built on [Forest] tiles <before adopting [Large Scale Foraging]>",
+			"Cannot be built on [Jungle] tiles <before adopting [Large Scale Foraging]>",
 		],
 		"shortcutKey": "C"
 	},
