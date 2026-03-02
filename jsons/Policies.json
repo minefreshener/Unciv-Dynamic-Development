@@ -12,7 +12,7 @@
         "uniques": [
             "Technological",
             "Only available <after discovering [Agriculture]>",
-            "Comment [Unlocks Farm]"
+            "Comment [Unlocks Farm and Granary]"
         ],
         "policies": [
             {
@@ -109,7 +109,7 @@
             {
                 "name": "Large-Scale Foraging",
                 "uniques": [
-                    "Comment [allows Camp improvements to be built on all forest and jungle tiles]"
+                    "Comment [allows Camp improvements to be built on all Forest and Jungle tiles]"
                 ],
                 "requires": ["Foraging","Hunting"],
                 "row": 2,
@@ -144,48 +144,68 @@
         },
         "uniques": [
             "Technological",
-            "Comment [Unlocks Pottery Workshop and Granary]",
+            "Comment [Unlocks Pottery Workshop and Kiln]",
+            "Only available <after discovering [Pottery]>",
         ],
         "policies": [
             {
-                "name": "",
+                "name": "Storage Vessels",
                 "uniques": [
-                    "[+1 Food] from every []",
+                    "[+1 Food] from every [Granary]",
                 ],
                 "row": 1,
                 "column": 1
             },
             {
-                "name": "Trapping",
+                "name": "Pottery Wheel",
                 "uniques": [
-                    "[+1 Production] from every [Camp]",
-                    "Only available <after discovering [Trapping]>",
+                    "[+1 Production] from every [Pottery Workshop]",
+                    "Only available <after discovering [The Wheel]>",
                 ],
                 "row": 1,
                 "column": 3
             },
             {
-                "name": "Large-Scale Foraging",
+                "name": "Advanced Kilns",
                 "uniques": [
-                    "Comment [allows Camp improvements to be built on all forest and jungle tiles]"
+                    "[+1 Production] from every [Kiln]",
+                    "Only available <after discovering [Masonry]>",
                 ],
-                "requires": ["Foraging","Hunting"],
+                "row": 1,
+                "column": 5
+            },
+            {
+                "name": "Cookware",
+                "uniques": [
+                    "[+1 Food] from every [Pottery Workshop]",
+                ],
+                "requires": ["Pottery Wheel"],
                 "row": 2,
                 "column": 1
             },
             {
-                "name": "Commercial Hunting",
+                "name": "Artistic Pottery",
                 "uniques": [
-                    "[-1 Food, +1 Gold] from every [Camp]",
-                    "Only available <after discovering [Guilds]>",
+                    "[+1 Culture] from every [Pottery Workshop]",
+                    "[+1 Culture] from every [Shrine]",
                 ],
-                "requires": ["Trapping"],
+                "requires": ["Pottery Wheel"],
                 "row": 2,
                 "column": 3
             },
             {
-                "name": "Forestry Complete",
+                "name": "Porcelain Production",
                 "uniques": [
+                    "Comment [+1 Porcelain from every Pottery Workshop]",
+                ],
+                "requires": ["Pottery Wheel", "Advanced Kilns"],
+                "row": 3,
+                "column": 5
+            },
+            {
+                "name": "Pottery Complete",
+                "uniques": [
+                    "Get the leader title of [[leaderName], The Potter]"
                 ]
             }
         ]
