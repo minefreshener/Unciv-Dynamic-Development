@@ -10,7 +10,6 @@
 			"[+1 Food] from [Fresh water] tiles <after discovering [Civil Service]>",
 			"[+1 Food] from [non-fresh water] tiles <after discovering [Fertilizer]>",
             "Pillaging this improvement yields approximately [+20 Gold]","Gives a defensive bonus of [5]%",
-		    "Only available <after discovering [Machinery]>",
             "Only available <after adopting [Agriculture]>"
 		],
 		"shortcutKey": "F"
@@ -55,6 +54,9 @@
 			"Pillaging this improvement yields approximately [+10 Gold]",
 			"Cannot be built on [Forest] tiles <before adopting [Large-Scale Foraging]>",
 			"Cannot be built on [Jungle] tiles <before adopting [Large-Scale Foraging]>",
+			"Cannot be built on [Furs] tiles <before adopting [Trapping]>",
+			"Cannot be built on [Ivory] tiles <before adopting [Trapping]>",
+			"Cannot be built on [Deer] tiles <before adopting [Trapping]>",
 		],
 		"shortcutKey": "C"
 	},
