@@ -51,6 +51,34 @@
 		],
 		"requiredTech": "Pottery"
 	},
+	{
+		"name": "Fletcher",
+		"maintenance": 1,
+		"hurryCostModifier": 25,
+		"uniques": [
+			"Only available <after adopting [Bowmanship]>",
+			"[+5]% Production when constructing [Bow] units [in this city]",
+		],
+		"requiredTech": "Archery"
+	},
+	{
+		"name": "Bowmaker",
+		"production": 1,
+		"maintenance": 1,
+		"hurryCostModifier": 25,
+		"uniques": [
+			"Only available <after adopting [Composite Bows]>",
+			"[+10]% Production when constructing [Bow] units [in this city]",
+		],
+		"requiredTech": "Construction"
+	},
+	{
+		"name": "Archery Range",
+		"hurryCostModifier": 25,
+		"maintenance": 1,
+		"uniques": ["New [Military] units start with [15] XP [in this city]", "Only available <after adopting [Bowmanship]>",],
+		"requiredTech": "Bronze Working"
+	},
 	// Always available
 	{
 		"name": "Monument",
