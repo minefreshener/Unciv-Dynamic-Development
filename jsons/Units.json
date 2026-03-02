@@ -20,69 +20,6 @@
 		"hurryCostModifier": 20
 	},
 	{
-		"name": "Scout",
-		"unitType": "Scout",
-		"movement": 2,
-		"strength": 5,
-		"cost": 25,
-		"obsoleteTech": "Scientific Theory",
-		"uniques": ["May upgrade to [Archer] through ruins-like effects", "Never appears as a Barbarian unit"],
-		"promotions": ["Ignore terrain cost"],
-		"attackSound": "nonmetalhit"
-	},
-	{
-		"name": "Warrior",
-		"unitType": "Sword",
-		"movement": 2,
-		"strength": 8,
-		"cost": 40,
-		"obsoleteTech": "Metal Casting",
-		"upgradesTo": "Swordsman",
-		"uniques": ["May upgrade to [Spearman] through ruins-like effects"],
-		"attackSound": "nonmetalhit",
-        "civilopediaText": [
-			{"text": "This is your basic, club-swinging fighter."}
-		]
-	},
-	{
-		"name": "Maori Warrior",
-		"unitType": "Sword",
-		"uniqueTo": "Polynesia",
-		"replaces": "Warrior",
-		"movement": 2,
-		"strength": 8,
-		"cost": 40,
-		"obsoleteTech": "Metal Casting",
-		"promotions": ["Haka War Dance"],
-		"upgradesTo": "Swordsman",
-		"attackSound": "nonmetalhit"
-	},
-	{
-		"name": "Jaguar",
-		"unitType": "Sword",
-		"uniqueTo": "Aztecs",
-		"replaces": "Warrior",
-		"movement": 2,
-		"strength": 8,
-		"cost": 40,
-		"obsoleteTech": "Metal Casting",
-		"promotions": ["[Jaguar] ability","Woodsman"],
-		"upgradesTo": "Swordsman",
-		"attackSound": "nonmetalhit"
-	},
-	{
-		"name": "Brute",
-		"unitType": "Sword",
-		"uniqueTo": "Barbarians",
-		"replaces": "Warrior",
-		"movement": 2,
-		"strength": 8,
-		"cost": 20,
-		"obsoleteTech": "Metal Casting",
-		"upgradesTo": "Swordsman",
-		"attackSound": "nonmetalhit"
-	},
-	{
 		"name": "Archer",
 		"unitType": "Archery",
 		"movement": 2,
@@ -150,6 +87,125 @@
 		"obsoleteTech": "Machinery",
 		"upgradesTo": "Crossbowman",
 		"attackSound": "arrow"
+	},
+	{
+		"name": "Composite Bowman",
+		"unitType": "Archery",
+		"movement": 2,
+		"strength": 7,
+		"rangedStrength": 11,
+		"cost": 75,
+		"requiredTech": "Construction",
+		"obsoleteTech": "Machinery",
+		"upgradesTo": "Crossbowman",
+		"attackSound": "arrow"
+	},
+	{
+		"name": "Crossbowman",
+		"unitType": "Archery",
+		"movement": 2,
+		"strength": 13,
+		"rangedStrength": 18,
+		"cost": 120,
+		"requiredTech": "Machinery",
+		"upgradesTo": "Gatling Gun",
+		"obsoleteTech": "Industrialization",
+		"attackSound": "crossbow"
+	},
+	{
+		"name": "Chu-Ko-Nu",
+		"unitType": "Archery",
+		"uniqueTo": "China",
+		"movement": 2,
+		"strength": 13,
+		"rangedStrength": 14,
+		"replaces": "Crossbowman",
+		"cost": 120,
+		"requiredTech": "Machinery",
+		"upgradesTo": "Gatling Gun",
+		"obsoleteTech": "Industrialization",
+		"promotions": ["[Chu-Ko-Nu] ability"],
+		"attackSound": "crossbow"
+	},
+	{
+		"name": "Longbowman",
+		"unitType": "Archery",
+		"range": 2,
+		"movement": 2,
+		"strength": 13,
+		"rangedStrength": 18,
+		"replaces": "Crossbowman",
+		"uniqueTo": "England",
+		"cost": 120,
+		"requiredTech": "Machinery",
+		"upgradesTo": "Gatling Gun",
+		"obsoleteTech": "Industrialization",
+		"promotions": ["Extended Range"],
+		"attackSound": "arrow"
+	},
+///////////////////////
+	{
+		"name": "Scout",
+		"unitType": "Scout",
+		"movement": 2,
+		"strength": 5,
+		"cost": 25,
+		"obsoleteTech": "Scientific Theory",
+		"uniques": ["May upgrade to [Archer] through ruins-like effects",],
+		"promotions": ["Ignore terrain cost"],
+		"attackSound": "nonmetalhit"
+	},
+	{
+		"name": "Warrior",
+		"unitType": "Sword",
+		"movement": 2,
+		"strength": 8,
+		"cost": 40,
+		"obsoleteTech": "Metal Casting",
+		"upgradesTo": "Swordsman",
+		"uniques": ["May upgrade to [Spearman] through ruins-like effects"],
+		"attackSound": "nonmetalhit",
+        "civilopediaText": [
+			{"text": "This is your basic, club-swinging fighter."}
+		]
+	},
+	{
+		"name": "Maori Warrior",
+		"unitType": "Sword",
+		"uniqueTo": "Polynesia",
+		"replaces": "Warrior",
+		"movement": 2,
+		"strength": 8,
+		"cost": 40,
+		"obsoleteTech": "Metal Casting",
+		"promotions": ["Haka War Dance"],
+		"upgradesTo": "Swordsman",
+		"attackSound": "nonmetalhit"
+	},
+	{
+		"name": "Jaguar",
+		"unitType": "Sword",
+		"uniqueTo": "Aztecs",
+		"replaces": "Warrior",
+		"movement": 2,
+		"strength": 8,
+		"cost": 40,
+		"obsoleteTech": "Metal Casting",
+		"promotions": ["[Jaguar] ability","Woodsman"],
+		"upgradesTo": "Swordsman",
+		"attackSound": "nonmetalhit"
+	},
+	{
+		"name": "Brute",
+		"unitType": "Sword",
+		"uniqueTo": "Barbarians",
+		"replaces": "Warrior",
+		"movement": 2,
+		"strength": 8,
+		"cost": 20,
+		"obsoleteTech": "Metal Casting",
+		"upgradesTo": "Swordsman",
+		"attackSound": "nonmetalhit"
 	},
 	{
 		"name": "Work Boats",
@@ -459,18 +515,6 @@
 		"attackSound": "throw"
 	},
 	{
-		"name": "Composite Bowman",
-		"unitType": "Archery",
-		"movement": 2,
-		"strength": 7,
-		"rangedStrength": 11,
-		"cost": 75,
-		"requiredTech": "Construction",
-		"obsoleteTech": "Machinery",
-		"upgradesTo": "Crossbowman",
-		"attackSound": "arrow"
-	},
-	{
 		"name": "Swordsman",
 		"unitType": "Sword",
 		"movement": 2,
@@ -651,49 +695,6 @@
 		"promotions": ["Great Generals I", "Quick Study"],
 		"attackSound": "arrow"
 		// Keshik should have no penalty attacking cities
-	},
-	{
-		"name": "Crossbowman",
-		"unitType": "Archery",
-		"movement": 2,
-		"strength": 13,
-		"rangedStrength": 18,
-		"cost": 120,
-		"requiredTech": "Machinery",
-		"upgradesTo": "Gatling Gun",
-		"obsoleteTech": "Industrialization",
-		"attackSound": "crossbow"
-	},
-	{
-		"name": "Chu-Ko-Nu",
-		"unitType": "Archery",
-		"uniqueTo": "China",
-		"movement": 2,
-		"strength": 13,
-		"rangedStrength": 14,
-		"replaces": "Crossbowman",
-		"cost": 120,
-		"requiredTech": "Machinery",
-		"upgradesTo": "Gatling Gun",
-		"obsoleteTech": "Industrialization",
-		"promotions": ["[Chu-Ko-Nu] ability"],
-		"attackSound": "crossbow"
-	},
-	{
-		"name": "Longbowman",
-		"unitType": "Archery",
-		"range": 2,
-		"movement": 2,
-		"strength": 13,
-		"rangedStrength": 18,
-		"replaces": "Crossbowman",
-		"uniqueTo": "England",
-		"cost": 120,
-		"requiredTech": "Machinery",
-		"upgradesTo": "Gatling Gun",
-		"obsoleteTech": "Industrialization",
-		"promotions": ["Extended Range"],
-		"attackSound": "arrow"
 	},
 	{
 		"name": "Trebuchet",
