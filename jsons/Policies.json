@@ -211,6 +211,239 @@
             }
         ]
     },
+        {
+        "name": "Mining",
+        "era": "Ancient Era",
+        "priorities": {
+            "Neutral": 5,
+            "Cultural": 10,
+            "Diplomatic": 5,
+            "Domination": 15,
+            "Scientific": 20
+        },
+        "uniques": [
+            "Technological",
+            "Comment [Unlocks Mine]",
+            "Only available <after discovering [Mining]>",
+        ],
+        "policies": [
+            {
+                "name": "Prospecting",
+                "uniques": [
+                    "Comment [Unlocks Mine]",
+                ],
+                "row": 1,
+                "column": 3
+            },
+            {
+                "name": "Open Pit Mining",
+                "uniques": [
+                    "Comment [allows Mine improvements to be built on non-resource tiles]"
+                ],
+                "requires": ["Prospecting"],
+                "row": 2,
+                "column": 1
+            },
+            {
+                "name": "Underground Mining",
+                "uniques": [
+                    "Only available <after discovering [Physics]>",
+                    "[+1 Production, -1 Food] from every [Mine]",
+                ],
+                "requires": ["Prospecting"],
+                "row": 2,
+                "column": 3
+            },
+            {
+                "name": "Quarrying",
+                "uniques": [
+                    "Only available <after discovering [Masonry]>",
+                    "Comment [Unlocks Quarry]",
+                ],
+                "requires": ["Prospecting"],
+                "row": 2,
+                "column": 5
+            },
+            {
+                "name": "Blast Mining",
+                "uniques": [
+                    "Only available <after discovering [Dynamite]>",
+                    "[+2 Production, -1 Food] from every [Mine]",
+                    "[+1 Production] from every [Quarry]",
+                ],
+                "requires": ["Open Pit Mining", "Underground Mining", "Quarrying"],
+                "row": 3,
+                "column": 3
+            },
+            {
+                "name": "Mountaintop Mining",
+                "uniques": [
+                    "Only available <after discovering [Dynamite]>",
+                    "[+2 Production] from every [Mountain]",
+                    "Comment [allows Mine improvements to be built on Mountain tiles]",
+                    "Comment [allows Quarry improvements to be built on Mountain tiles]",
+                ],
+                "requires": ["Blast Mining"],
+                "row": 4,
+                "column": 3
+            },
+            {
+                "name": "Mining Complete",
+                "uniques": [
+                    "Get the leader title of [[leaderName], The Miner]"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Writing",
+        "era": "Ancient Era",
+        "priorities": {
+            "Neutral": 5,
+            "Cultural": 20,
+            "Diplomatic": 20,
+            "Domination": 10,
+            "Scientific": 20
+        },
+        "uniques": [
+            "Technological",
+            "Only available <after discovering [Writing]>",
+            "[+1 Culture] from every [Monument]",
+            "[+1 Culture] from every [Palace]",
+        ],
+        "policies": [
+            {
+                "name": "Record Keeping",
+                "uniques": [
+                    "Comment [Unlocks Library]"
+                ],
+                "row": 1,
+                "column": 1
+            },
+            {
+                "name": "Parchment",
+                "uniques": [
+                    "[+1 Culture] from every [Library]",
+                    "Comment [Unlocks Paper Maker]"
+                ],
+                "row": 1,
+                "column": 3
+            },
+            {
+                "name": "Bookbinding",
+                "uniques": [
+                    "[+1 Culture, +1 Production] from every [Library]",
+                ],
+                "requires": ["Parchment", "Record Keeping"],
+                "row": 2,
+                "column": 2
+            },
+            {
+                "name": "Printing Press",
+                "uniques": [
+                    "[+1 Culture, +1 Happiness] from every [Library]",
+                    "Comment [Unlocks Printing House]",
+                    "Only available <after discovering [Printing Press]>",
+                ],
+                "requires": ["Bookbinding"],
+                "row": 3,
+                "column": 2
+            },
+            {
+                "name": "Advanced Paper",
+                "uniques": [
+                    "[+1 Science] from every [Library]",
+                    "Only available <after discovering [Industrialization]>",
+                ],
+                "requires": ["Printing Press"],
+                "row": 4,
+                "column": 2
+            },
+            {
+                "name": "Writing Complete",
+                "uniques": [
+                    "Get the leader title of [[leaderName], The Author]"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Calendar",
+        "era": "Ancient Era",
+        "priorities": {
+            "Neutral": 5,
+            "Cultural": 10,
+            "Diplomatic": 10,
+            "Domination": 10,
+            "Scientific": 20
+        },
+        "uniques": [
+            "Technological",
+            "Only available <after discovering [Writing]>",
+            "Only available <after discovering [Calendar]>",
+        ],
+        "policies": [
+            {
+                "name": "Crop Rotation",
+                "uniques": [
+                    "Comment [Unlocks Plantation]"
+                ],
+                "row": 1,
+                "column": 1
+            },
+            {
+                "name": "Simultaneous Crop Growth",
+                "uniques": [
+                    "[+1 Food] from every [Farm]",
+                ],
+                "requires": ["Crop Rotation"],
+                "row": 2,
+                "column": 1
+            },
+            {
+                "name": "The Three Sisters",
+                "uniques": [
+                    "[+1 Food, +1 Culture] from every [Farm]",
+                ],
+                "requires": ["Simultaneous Crop growth"],
+                "row": 3,
+                "column": 1
+            },
+            {
+                "name": "Chronology",
+                "uniques": [
+                    "[+1 Science] from every [Library]",
+                    "Only available <after adopting [Record Keeping]>"
+                ],
+                "row": 1,
+                "column": 3
+            },
+            {
+                "name": "Timekeeping",
+                "uniques": [
+                    "Only available <after discovering [Machinery]>",
+                ],
+                "requires": ["Chronology"],
+                "row": 2,
+                "column": 3
+            },
+            {
+                "name": "The World Calendar",
+                "uniques": [
+                    "Comment [1 of 1 policies needed for World Calendar]",
+                ],
+                "requires": ["Timekeeping"],
+                "row": 3,
+                "column": 3
+            },
+            {
+                "name": "Calendar Complete",
+                "uniques": [
+                    "Get the leader title of [[leaderName], The Timekeeper]"
+                ]
+            }
+        ]
+    },
     {
         "name": "Melee Weaponry",
         "era": "Ancient Era",
@@ -560,90 +793,6 @@
                 "name": "Archery Complete",
                 "uniques": [
                     "Get the leader title of [[leaderName], Bowmaster]"
-                ]
-            }
-        ]
-    },
-    {
-        "name": "Mining",
-        "era": "Ancient Era",
-        "priorities": {
-            "Neutral": 5,
-            "Cultural": 10,
-            "Diplomatic": 5,
-            "Domination": 15,
-            "Scientific": 20
-        },
-        "uniques": [
-            "Technological",
-            "Comment [Unlocks Mine]",
-            "Only available <after discovering [Mining]>",
-        ],
-        "policies": [
-            {
-                "name": "Prospecting",
-                "uniques": [
-                    "Comment [Unlocks Mine]",
-                ],
-                "row": 1,
-                "column": 3
-            },
-            {
-                "name": "Open Pit Mining",
-                "uniques": [
-                    "Comment [allows Mine improvements to be built on non-resource tiles]"
-                ],
-                "requires": ["Prospecting"],
-                "row": 2,
-                "column": 1
-            },
-            {
-                "name": "Underground Mining",
-                "uniques": [
-                    "Only available <after discovering [Physics]>",
-                    "[+1 Production, -1 Food] from every [Mine]",
-                ],
-                "requires": ["Prospecting"],
-                "row": 2,
-                "column": 3
-            },
-            {
-                "name": "Quarrying",
-                "uniques": [
-                    "Only available <after discovering [Masonry]>",
-                    "Comment [Unlocks Quarry]",
-                ],
-                "requires": ["Prospecting"],
-                "row": 2,
-                "column": 5
-            },
-            {
-                "name": "Blast Mining",
-                "uniques": [
-                    "Only available <after discovering [Dynamite]>",
-                    "[+2 Production, -1 Food] from every [Mine]",
-                    "[+1 Production] from every [Quarry]",
-                ],
-                "requires": ["Open Pit Mining", "Underground Mining", "Quarrying"],
-                "row": 3,
-                "column": 3
-            },
-            {
-                "name": "Mountaintop Mining",
-                "uniques": [
-                    "Only available <after discovering [Dynamite]>",
-                    "[+2 Production] from every [Mountain]",
-                    "Comment [allows Mine improvements to be built on Mountain tiles]",
-                    "Comment [allows Quarry improvements to be built on Mountain tiles]",
-                ],
-                "requires": ["Blast Mining"],
-                "row": 4,
-                "column": 3
-            },
-            {
-                "name": "Mining Complete",
-                "uniques": [
-                    "Get the leader title of [[leaderName], The Miner]"
                 ]
             }
         ]
